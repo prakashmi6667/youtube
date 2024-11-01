@@ -93,11 +93,11 @@ nav{
 
 .sidebar{
     background: #fff;
-    width: 5%;
+    width: 6%;
     height: 100vh;
     position: fixed;
     top: 0;
-    /* padding-left: 2%; */
+    padding-left: 1%;
     padding-top: 70px;
     transition: 0.3s;
     z-index: 1;
@@ -248,40 +248,41 @@ margin-bottom: 0.2rem;
      }
 
      
-.large-sidebar{
-    width: 20%; 
-    left: 10px;
-    transition: 0.3s;
-    z-index: 1;
- }
- 
- .large-sidebar a p {
-     display: block;
-     transition: 0.3s;
-     z-index: 1;
- }
+    .large-sidebar{
+        width: 20%; 
+        left: 10px;
+        transition: 0.3s;
+        z-index: 1;
+    }
+    
+    .large-sidebar a p {
+        display: block;
+        transition: 0.3s;
+        z-index: 1;
+    }
 
 
  
-.sidebar .shortcut-links a img{
-    width: 15px;
-    margin-right: 5px;
-    margin-top: 10px;
-    color: #ccc;
-    transition: 0.3s;
-    z-index: 1;
-    left: -10px;
+    .sidebar .shortcut-links a img{
+        width: 15px;
+        margin-right: 5px;
+        margin-top: 10px;
+        color: #ccc;
+        transition: 0.3s;
+        z-index: 1;
+        left: -10px;
 
-}
-.sidebar .shortcut-links a{
-    color: #9b9393;
-    transition: 0.3s;
-    z-index: 1;
-    font-size: 10px;
-}
-.sidebar{
-    left: 8px;
-}
+    }
+    .sidebar .shortcut-links a{
+        color: #9b9393;
+        transition: 0.3s;
+        z-index: 1;
+        font-size: 10px;
+    }
+    .sidebar{
+        left: 8px;
+        padding-left: 0px;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -317,40 +318,41 @@ margin-bottom: 0.2rem;
      }
 
      
-.large-sidebar{
-    width: 20%; 
-    left: 10px;
-    transition: 0.3s;
-    z-index: 1;
- }
- 
- .large-sidebar a p {
-     display: block;
-     transition: 0.3s;
-     z-index: 1;
- }
+    .large-sidebar{
+        width: 20%; 
+        left: 10px;
+        transition: 0.3s;
+        z-index: 1;
+    }
+    
+    .large-sidebar a p {
+        display: block;
+        transition: 0.3s;
+        z-index: 1;
+    }
 
 
- 
-.sidebar .shortcut-links a img{
-    width: 15px;
-    margin-right: 5px;
-    margin-top: 10px;
-    color: #ccc;
-    transition: 0.3s;
-    z-index: 1;
-    left: -10px;
+    
+    .sidebar .shortcut-links a img{
+        width: 15px;
+        margin-right: 5px;
+        margin-top: 10px;
+        color: #ccc;
+        transition: 0.3s;
+        z-index: 1;
+        left: -10px;
 
-}
-.sidebar .shortcut-links a{
-    color: #9b9393;
-    transition: 0.3s;
-    z-index: 1;
-    font-size: 10px;
-}
-.sidebar{
-    left: 8px;
-}
+    }
+    .sidebar .shortcut-links a{
+        color: #9b9393;
+        transition: 0.3s;
+        z-index: 1;
+        font-size: 10px;
+    }
+    .sidebar{
+        left: 8px;
+        padding-left: 0px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -400,3 +402,83 @@ margin-bottom: 0.2rem;
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}
+
+
+
+
+/* ---------------------video play ------------ */
+
+.video-editor video{
+    width: 100%;
+}
+
+.related .card-body img{
+    width: 100px;
+    height: 100%;
+}
+
+.related .card{
+    height: 100%;
+}
+.video-details img{
+    width: 40px;
+    height: 40px;
+    border-radius: 40%;
+}
+
+.video-details{
+    display: flex;
+    margin: auto;
+}
+
+.subscribe-button{
+    background-color: #000000;
+    color: #fff;
+    font-size: 14px;
+    margin: auto;
+}
+
+.likeUnlike{
+    display: flex;  
+    padding: 25px;  
+   
+}
+
+.likeUnlike img{
+    width: 25px;
+    margin: auto;
+    margin-right: 10px;
+}
+.likeUnlike a{
+    margin-left: 25px;
+}
+.share img{
+    width: 25px;
+}
+.share{
+    align-items: center;
+    margin: auto;
+    background-color: #ccc;
+    color: #504f4f;
+}
+
+p{
+    font-size: 16px;
+}
+.text-dark{
+    color: #000000;
+    font-weight: bold;
+}
+
+.comments img{
+    width: 50px;
+    margin-right: 12px;
+}
+
+.comments input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid;
+    outline: 0;
+    background: transparent;
+}
