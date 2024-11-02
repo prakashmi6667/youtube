@@ -2,24 +2,7 @@
 {% load static %}
 {% block styleArea %}{% endblock %}
 {% block mainArea %}
-<!-- ------------side bar ------- -->
-<div class="sidebar">
-    <div class="shortcut-links">
-        <a href="">
-            <img src="/static/images/home.png" alt="home"><p>Home</p>
-        </a>
-        <a href="">
-            <img src="/static/images/shorts.jpg" alt="explore"><p>Shorts</p>
-        </a>
-        <a href="">
-            <img src="/static/images/subscribe.png" alt="subscription"><p>Subscription</p>
-        </a>
-        <a href="">
-            <img src="/static/images/user.png" alt="user"><p>You</p>
-        </a>
-        
-    </div>
- </div>
+
  <!-- ----------main body---------- -->
  <div class="main-body" id="mainbody">
     
@@ -50,52 +33,52 @@
         </div> -->
     
         <div class="row">
-            <div class="col-md-6 col-lg-4 col-xl-4 col-sm-6">
+            {% for dt in videos %}
+            <div class="col-md-6 col-lg-4 col-xl-4 col-sm-6 mb-4">
                 <div class="card">
-                    <img src="/static/images/card.jpg" class="card-img-top" alt="...">
+                    <a href="{% url 'playVideo' dt.id %}">
+                        <img src="{{dt.thumbnail.url}}" class="card-img-top" alt="...">
+                    </a>
                     <div class="card-body flex-div">
                         <div class="thumbnail">
-                            <img src="/static/images/user.png" alt="">
+                            <a href="{% url 'playVideo' dt.id %}">
+                                <img src="{{dt.channel.logo}}" alt="">
+                            </a>
                         </div>
                         <div class="content">
-                            <h5 class="card-title">Card title hsjhdkashdkahadkh jashdkjh jaskdhk</h5>
-
-                            <p class="card-text text-muted">prakash.com</p>
-                            <p class="card-text text-muted"><span>150 Like</span><span>30 views</span></p>
+                            <a href="{% url 'playVideo' dt.id %}">
+                                <h6 class="card-title">{{dt.title|truncatechars:50}}</h6>
+                            </a>
+                            <p class="card-text text-muted">{{dt.channel.name}}</p>
+                            <p class="card-text text-muted">{{dt.like}} Like &nbsp; {{dt.views}} views</p>
                         </div>
                     </div>
                   </div>
             </div>
-            <div class="col-md-6 col-lg-4 col-xl-4 col-sm-6">
+            {% endfor %}
+            {% for dt in videos %}
+            <div class="col-md-6 col-lg-4 col-xl-4 col-sm-6 mb-4">
                 <div class="card">
-                    <img src="/static/images/card.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="{% url 'playVideo' dt.id %}">
+                        <img src="{{dt.thumbnail.url}}" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body flex-div">
+                        <div class="thumbnail">
+                            <a href="{% url 'playVideo' dt.id %}">
+                                <img src="{{dt.channel.logo}}" alt="">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <a href="{% url 'playVideo' dt.id %}">
+                                <h6 class="card-title">{{dt.title|truncatechars:50}}</h6>
+                            </a>
+                            <p class="card-text text-muted">{{dt.channel.name}}</p>
+                            <p class="card-text text-muted">{{dt.like}} Like &nbsp; {{dt.views}} views</p>
+                        </div>
                     </div>
                   </div>
             </div>
-            <div class="col-md-6 col-lg-4 col-xl-4 col-sm-6">
-                <div class="card">
-                    <img src="/static/images/card.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-md-6 col-lg-4 col-xl-4 col-sm-6">
-                <div class="card">
-                    <img src="/static/images/card.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
  </div>

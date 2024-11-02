@@ -22,5 +22,5 @@ from website.views import index, playVideo
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
-    path('play-video', playVideo, name='playVideo')
+    path('play-video/<int:id>/', playVideo, name='playVideo')
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

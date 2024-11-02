@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube clone</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     {% block styleArea %}{% endblock %}
 </head>
@@ -29,6 +29,24 @@
             <img class="user-icon" src="/static/images/user.png" alt="">
         </div>
     </nav>
+    <!-- ------------side bar ------- -->
+    <div class="sidebar">
+        <div class="shortcut-links">
+            <a href="{% url 'index' %}">
+                <img src="/static/images/home.png" alt="home"><p>Home</p>
+            </a>
+            <a href="{% url 'index' %}">
+                <img src="/static/images/shorts.jpg" alt="explore"><p>Shorts</p>
+            </a>
+            <a href="{% url 'index' %}">
+                <img src="/static/images/subscribe.png" alt="subscription"><p>Subscription</p>
+            </a>
+            <a href="{% url 'index' %}">
+                <img src="/static/images/user.png" alt="user"><p>You</p>
+            </a>
+            
+        </div>
+    </div>
     {% block mainArea %}{% endblock %}
 
     <script src="/static/js/script.js"></script>
