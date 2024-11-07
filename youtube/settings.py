@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     #my installing app
     'website.apps.WebsiteConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

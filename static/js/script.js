@@ -26,3 +26,11 @@ document.getElementById("unlikeBtn").addEventListener("click", function(event) {
     unlikeImg.src = (unlikeImg.src.includes("unlike.png")) ? "/static/images/unliked.png" : "/static/images/unlike.png";
     likeImg.src = "/static/images/like.png"; // Reset like image if clicked
 });
+
+async function fn_BindComments(){
+
+   let data =  await fn_GetAsyncCall('/api/comments/');
+
+   console.table(data)
+
+}
